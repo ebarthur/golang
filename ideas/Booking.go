@@ -45,7 +45,7 @@ func main() {
 	showSeatingArrangement()
 
 	for attempts > 0 {
-		fmt.Print("Enter the desired row (1-13) and seat letter (A-F): ")
+		fmt.Print("Enter the desired row (1-13) and seat letter (A-F)(eg. 1D, 4A): ")
 		fmt.Scan(&row, &seat)
 
 		if row < 1 || row > 13 || seat < "A" || seat > "F" {
@@ -73,10 +73,11 @@ func bookSeat(row int, seat string) bool {
 		seating[row-1][seat[0]-'A'] = 'X'
 		fmt.Println("Seat booked successfully!")
 		return true
-	} else {
-		fmt.Println("Seat already booked. Please select another seat.")
-		return false
 	}
+	fmt.Println("Seat already booked. Please select another seat.")
+
+	return false
+
 }
 
 func isSeatAvailable(row int, seat string) bool {

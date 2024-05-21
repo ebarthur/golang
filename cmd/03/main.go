@@ -20,58 +20,42 @@ package main
 import "fmt"
 
 func main() {
-    var movieStar string = "Liam Leeson"
-    printName(movieStar)
+	var movieStar string = "Liam Leeson"
+	printName(movieStar)
 
-    var num1, num2 int = 10, 0
-    result, remainder, err := integerDivision(num1, num2)
-    if err != nil {
-        fmt.Println(err)
-    }else if remainder == 0 {
+	var num1, num2 int = 10, 0
+	result, remainder, err := integerDivision(num1, num2)
+	if err != nil {
+		fmt.Println(err)
+	} else if remainder == 0 {
 		fmt.Printf("The result of the integer division is %v", result)
-	}else {
-        fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
-    }
+	} else {
+		fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
+	}
 
-    // Using Switches: break is not required in Go
-    // switch {
-    // case err != nil:
-    //     fmt.Println(err)
-    // case remainder == 0:
-    //     fmt.Printf("The result of the integer division is %v", result)
-    // default:
-    //     fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
-    // }
+	// Using Switches: break is not required in Go
+	// switch {
+	// case err != nil:
+	//     fmt.Println(err)
+	// case remainder == 0:
+	//     fmt.Printf("The result of the integer division is %v", result)
+	// default:
+	//     fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
+	// }
 
-    extras()
 }
 
 func printName(name string) {
-    fmt.Println(name)
+	fmt.Println(name)
 }
 
-func integerDivision(numerator int, denominator int) (int, int, error){
-    if denominator == 0 {
-        return 0, 0, fmt.Errorf("Denominator cannot be zero")
-    }
-
-    var result int = numerator/denominator
-    var remainder int = numerator%denominator
-
-    return result, remainder, nil
-}
-
-func extras(){
-
-    if 1 == 1 && 2 == 2 {
-		fmt.Println("Passed the check")
+func integerDivision(numerator int, denominator int) (int, int, error) {
+	if denominator == 0 {
+		return 0, 0, fmt.Errorf("denominator cannot be zero")
 	}
 
-    if  1 == 1 || 2 == 2 {
-        fmt.Println("Passed the check")
-    }
-}
+	var result int = numerator / denominator
+	var remainder int = numerator % denominator
 
-func intergerDivisionButWithSwitch(){
-
+	return result, remainder, nil
 }

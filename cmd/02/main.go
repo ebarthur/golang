@@ -17,22 +17,22 @@ import (
 
 func main() {
 	var intNum int = 32767
-	intNum += 1	
+	intNum++
 
 	fmt.Println(intNum)
 
 	// float64 stores most precise floating point numbers
-	
+
 	var floatNum float64 = 12345.6789
 	var floatNum2 float32 = 12345.6789
 
-	fmt.Println(floatNum) // 12345.6789
+	fmt.Println(floatNum)  // 12345.6789
 	fmt.Println(floatNum2) // 12345.679
 
-	// adding two variables of different types is not allowed in Go 
+	// adding two variables of different types is not allowed in Go
 	// fmt.Println(intNum + floatNum) // invalid operation: intNum + floatNum (mismatched types int and float64)
 	// Unless you type cast the variables
-
+	
 	var floatNum32 float32 = 10.1
 	var intNum32 int32 = 2
 	var resultfloatNum32 float32 = floatNum32 + float32(intNum32)
@@ -44,7 +44,7 @@ func main() {
 	fmt.Println(intNum1 / intNum2) // 1
 	fmt.Println(intNum1 % intNum2) // 1
 
-	// var myString string = "Hello 
+	// var myString string = "Hello
 	// World!"
 
 	// fmt.println(myString) // syntax error: unexpected newline, expecting comma or )
@@ -59,16 +59,16 @@ func main() {
 	fmt.Println(myString3)
 
 	var location string = "California"
-	var anottherString string = "I live in" + " " + location
+	var anotherString string = "I live in" + " " + location
 
-	fmt.Println(len(location)) // 10
-	fmt.Println(utf8.RuneCountInString(anottherString)) // 20
+	fmt.Println(len(location))                         // 10
+	fmt.Println(utf8.RuneCountInString(anotherString)) // 20
 
 	var myRune rune = 'a' // rune is an alias for int32
-	fmt.Println(myRune) // 97 (ASCII value of 'a')
+	fmt.Println(myRune)   // 97 (ASCII value of 'a')
 
 	var myBoolean bool = true
-	fmt.Println(myBoolean) // true
+	fmt.Println(myBoolean) // true, the zero value of the boolean data type is 0
 
 	var myComplex complex64 = 1 + 2i
 	fmt.Println(myComplex) // (1+2i)
@@ -92,7 +92,7 @@ func main() {
 	// Constants are immutable
 
 	const year int = 2024
-	fmt.Println(year) 
+	fmt.Println(year)
 
 	const pi float32 = 3.14159
 	fmt.Println(pi)
