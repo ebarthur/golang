@@ -32,7 +32,7 @@ func main() {
 	// adding two variables of different types is not allowed in Go
 	// fmt.Println(intNum + floatNum) // invalid operation: intNum + floatNum (mismatched types int and float64)
 	// Unless you type cast the variables
-	
+
 	var floatNum32 float32 = 10.1
 	var intNum32 int32 = 2
 	var resultfloatNum32 float32 = floatNum32 + float32(intNum32)

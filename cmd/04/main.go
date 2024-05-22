@@ -5,6 +5,8 @@
 
 * Arrays
 * Slices
+* Make
+* Copy
 * Maps
 * Loops
  */
@@ -59,6 +61,38 @@ func main() {
 	someArray = append(someArray, intSlice...) // similar to the rest operator in JavaScript
 
 	fmt.Println(someArray)
+
+	/*
+	* Make: allows to create empty slice that already as a length or capacity specified
+	 */
+
+	someSlice := make([]int32, 5)        // empty slice with specified length
+	anotherSlice := make([]int32, 5, 10) // this time I specify the length and the capacity
+
+	someSlice = append(someSlice, 5) // number gets added to the end
+	anotherSlice = append(anotherSlice, 6, 7, 8, 9, 0, 1)
+
+	fmt.Println("Some Slice: ", someSlice)
+	fmt.Println(anotherSlice)
+
+	/*
+	* Slicing slices
+	 */
+
+	lasagna := []int32{1, 2, 4}
+
+	fmt.Println(lasagna[1:]) // just like in python
+
+	/*
+	* Copy - creates a slice that's independent of the original.
+	* It takes two parameters; copy(destination, source)
+	 */
+
+	a := []int{2, 1, 4}
+	y := make([]int, 3)
+
+	z := copy(y, a) // y gets populated with the elements in 'a'
+	fmt.Println(y, z)
 
 	/*
 	* Maps: {"key": "value"} pairs
