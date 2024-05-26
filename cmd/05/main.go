@@ -38,4 +38,19 @@ func main() {
 		catStr += strSlice[i]
 	}
 	fmt.Printf("\n%v", catStr) // software
+
+	// Extracting a substring
+
+	var s string = "Welcome"
+	var e byte = s[1]
+
+	fmt.Printf("\n%v",e) // 101
+
+	// Converting a string to a slice of bytes
+
+	var h string = "Manchester"
+
+	var bs []byte = []byte(h)
+
+	println(bs) // [77 97 110 99 104 101 115 116 101 114]
 }

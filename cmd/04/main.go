@@ -63,7 +63,7 @@ func main() {
 	fmt.Println(someArray)
 
 	/*
-	* Make: allows to create empty slice that already as a length or capacity specified
+	* Make: allows to create empty slice that already has a length or capacity specified
 	 */
 
 	someSlice := make([]int32, 5)        // empty slice with specified length
@@ -89,10 +89,11 @@ func main() {
 	 */
 
 	a := []int{2, 1, 4}
-	y := make([]int, 3)
+	y := make([]int, len(a))
 
 	z := copy(y, a) // y gets populated with the elements in 'a'
-	fmt.Println(y, z)
+	fmt.Println(y,z)
+	fmt.Printf("Copied: %v",y)
 
 	/*
 	* Maps: {"key": "value"} pairs
