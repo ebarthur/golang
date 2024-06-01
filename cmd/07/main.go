@@ -22,12 +22,14 @@ func main() {
 
 	var thing1 = [5]float64{1, 2, 3, 4, 5}
 	var result [5]float64 = square(thing1)
-	fmt.Printf("\nThe result is: %v", result)
+
+	fmt.Println(thing1)
+	fmt.Printf("The result is: %v", result)
 
 	fmt.Printf("\nThe value p points to is: %v", *p)
 	fmt.Printf("\nThe value of i is: %v", i)
 
-	*p = 10
+	*p = int32(result[3])
 	fmt.Printf("\nThe value p points to is: %v", *p)
 
 }
