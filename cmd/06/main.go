@@ -18,6 +18,12 @@ type gasEngine struct {
 	// owner
 }
 
+type person struct {
+	name string
+	age  uint32
+	job  []string
+}
+
 type owner struct {
 	name string
 }
@@ -49,6 +55,10 @@ func (e electricEngine) milesleft() uint8 {
 }
 
 func main() {
+
+	Kofi := person{"Kofi", 25, []string{"Software Engineer", "Data Scientist"}}
+
+	fmt.Println(Kofi.age) // 25
 	// var myEngine gasEngine
 	// var myEngine2 gasEngine = gasEngine{25, 15, owner{"Vin"}}
 	// myEngine.mpg = 20
@@ -58,9 +68,9 @@ func main() {
 
 	// fmt.Printf("Total miles left in tank: %v", myEngine2.milesleft())
 
-	var myEngine gasEngine = gasEngine{25, 15}
+	var myEngine = gasEngine{25, 15}
 	canMakeIt(myEngine, 50)
 
-	var myEngine1 electricEngine = electricEngine{25, 15}
+	var myEngine1 = electricEngine{25, 15}
 	canMakeIt(myEngine1, 50)
 }

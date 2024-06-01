@@ -92,8 +92,8 @@ func main() {
 	y := make([]int, len(a))
 
 	z := copy(y, a) // y gets populated with the elements in 'a'
-	fmt.Println(y,z)
-	fmt.Printf("Copied: %v",y)
+	fmt.Println(y, z)
+	fmt.Printf("Copied: %v", y)
 
 	/*
 	* Maps: {"key": "value"} pairs
@@ -116,6 +116,18 @@ func main() {
 	} else {
 		fmt.Println("Invalid Name")
 	}
+
+	groups := map[int][]string{1: {"Nhyira, Kwarteng"}, 2: {"Samia, Arthur"}, 3: {"Phil, Adom"}}
+
+	// using comma ok idiom: checks if the key exists in the map
+	one1, ok := groups[1]
+
+	fmt.Printf("Group 1: %s\n", one1)
+	fmt.Println(ok) // true
+
+	delete(groups, 3)
+
+	fmt.Println(groups)
 
 	/*
 	* Loops

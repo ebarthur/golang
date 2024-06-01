@@ -44,7 +44,7 @@ func main() {
 	var s string = "Welcome"
 	var e byte = s[1]
 
-	fmt.Printf("\n%v",e) // 101
+	fmt.Printf("\n%v", e) // 101
 
 	// Converting a string to a slice of bytes
 
