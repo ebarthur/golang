@@ -11,7 +11,7 @@
 * - if
 * - else
 * - else if
-* - for
+* - for - the complete for, the conditional-only, infinite, for-range
 * - switch etc
  */
 
@@ -33,15 +33,8 @@ func main() {
 		fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
 	}
 
-	// Using Switches: break is not required in Go
-	// switch {
-	// case err != nil:
-	//     fmt.Println(err)
-	// case remainder == 0:
-	//     fmt.Printf("The result of the integer division is %v", result)
-	// default:
-	//     fmt.Printf("The result of the integer division is %v and the remainder is %v", result, remainder)
-	// }
+	// Div()
+	Div()
 
 }
 
@@ -58,4 +51,20 @@ func integerDivision(numerator int, denominator int) (int, int, error) {
 	var remainder int = numerator % denominator
 
 	return result, remainder, nil
+}
+
+func Div() {
+	for i := 0; i < 10; i++ {
+		switch {
+		case i%2 == 0:
+			fmt.Println(i, "is even")
+		case i%3 == 0:
+			fmt.Println(i, "is divisible by 3 but not 2")
+		case i%7 == 0:
+			fmt.Println(i, "is divisible by 7 but not 2 or 3")
+			break
+		default:
+			fmt.Println(i, "is boring")
+		}
+	}
 }
