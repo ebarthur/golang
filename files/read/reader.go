@@ -13,7 +13,7 @@ func ReadTextFile(filename string) (string, error) {
 
 	// handle errors
 	if err != nil {
-		fmt.Errorf("An error occured: %d", err)
+		fmt.Println("An error occurred: ", err)
 	}
 
 	// return the content of the file
