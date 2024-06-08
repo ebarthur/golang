@@ -4,7 +4,10 @@ import "os"
 
 func WriteToFile(filename string, content string) error {
 
-	os.WriteFile(filename, []byte(content), 0644)
+	err := os.WriteFile(filename, []byte(content), 0644)
+	if err != nil {
+		return err
+	}
 
 	return nil
 }

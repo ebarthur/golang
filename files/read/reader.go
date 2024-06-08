@@ -1,7 +1,7 @@
 package read
 
 import (
-	"fmt"
+	"log"
 	"os"
 )
 
@@ -13,7 +13,7 @@ func ReadTextFile(filename string) (string, error) {
 
 	// handle errors
 	if err != nil {
-		fmt.Println("An error occurred: ", err)
+		log.Fatal(err)
 	}
 
 	// return the content of the file
