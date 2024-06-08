@@ -51,4 +51,13 @@ func main() {
 
 	// check a student's GPA
 	fmt.Println(Kwarteng.GetGPA()) // Andrews Kwarteng: 3.54
+
+	bookmarked := [2]d.Workshop{Webdev, AI}
+
+	//fmt.Println(bookmarked)
+
+	// using a loop to print the items in the array
+	for _, workshop := range bookmarked {
+		fmt.Println(workshop.Course.Name, "=======", workshop.Date)
+	}
 }
