@@ -13,3 +13,16 @@ func TestGetRate(t *testing.T) {
 		t.Error("Error was not found")
 	}
 }
+
+// Test for currency codegit
+func TestGetBTCRate(t *testing.T) {
+	rate, err := api.GetRate("btc")
+
+	if err != nil {
+		t.Error("Error was found")
+	}
+
+	if rate.Currency != "BTC" {
+		t.Error("Currency code is not BTC")
+	}
+}
