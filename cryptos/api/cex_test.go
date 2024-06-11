@@ -14,7 +14,7 @@ func TestGetRate(t *testing.T) {
 	}
 }
 
-// Test for currency codegit
+// Test for currency code
 func TestGetBTCRate(t *testing.T) {
 	rate, err := api.GetRate("btc")
 
