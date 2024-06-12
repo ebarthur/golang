@@ -16,7 +16,7 @@ func main() {
 
 	server := http.NewServeMux()
 
-	server.HandleFunc("/hello", handleHello)
+	server.HandleFunc("/", handleHello)
 
 	err := http.ListenAndServe(":3000", server)
 
