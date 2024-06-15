@@ -15,7 +15,7 @@ func Get(w http.ResponseWriter, r *http.Request) {
 	id := r.URL.Query()["id"]
 
 	// specify request method
-	if r.Method == "GET" {
+	if r.Method == http.MethodGet {
 
 		// if url string contains id
 		if id != nil {
@@ -40,6 +40,6 @@ func Get(w http.ResponseWriter, r *http.Request) {
 		}
 	} else {
 		// handle invalid request method to this endpoint
-		http.Error(w, "Invalid request for this endpoint", http.StatusBadRequest)
+		http.Error(w, "Unsupported Method", http.StatusMethodNotAllowed)
 	}
 }
