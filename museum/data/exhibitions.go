@@ -1,15 +1,19 @@
 package data
 
 type Exhibition struct {
-	Title         string
-	Description   string
-	Image         string
-	Color         string
-	CurrentlyOpen bool
+	Title         string `json:"title"`
+	Description   string `json:"description"`
+	Image         string `json:"image"`
+	Color         string `json:"color"`
+	CurrentlyOpen bool   `json:"currentlyOpen"`
 }
 
 func GetAll() []Exhibition {
 	return list
+}
+
+func Add(e Exhibition) {
+	list = append(list, e)
 }
 
 var list = []Exhibition{
