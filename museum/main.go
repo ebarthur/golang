@@ -48,6 +48,7 @@ func main() {
 
 	// render exhibitions
 	server.HandleFunc("/api/exhibitions", api.Get)
+	server.HandleFunc("/api/exhibitions/create", api.Post)
 
 	// serve static files
 	fs := http.FileServer(http.Dir("./public"))
