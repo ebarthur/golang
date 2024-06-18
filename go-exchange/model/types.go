@@ -15,6 +15,10 @@ type Response struct {
 }
 
 type Rate struct {
-	Currency string
-	Price    float64
+	CurrencyPair     string
+	Price            float64
+	Volume           string
+	Timestamp        string
+	Change           string
+	ChangePercentage string
 }
