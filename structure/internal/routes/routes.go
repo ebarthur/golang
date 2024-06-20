@@ -16,6 +16,7 @@ func NewRouter() http.Handler {
 	v1Auth := http.NewServeMux()
 
 	v1.Handle("/ping", handlers.HandlePing())
+	v1Auth.Handle("/fact", handlers.HandleCatFact())
 	v1Auth.Handle("/data", handlers.HandleData())
 
 	// Middleware wrap for routes

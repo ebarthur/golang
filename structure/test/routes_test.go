@@ -53,3 +53,22 @@ func TestDataRoute(t *testing.T) {
 			rr.Body.String(), expected)
 	}
 }
+
+func TestFactRoute(t *testing.T) {
+	router := routes.NewRouter()
+
+	req, err := http.NewRequest("GET", "/api/v1/fact", nil)
+	req.Header.Set("Authorization", "Bearer token")
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	rr := httptest.NewRecorder()
+	router.ServeHTTP(rr, req)
+
+	if status := rr.Code; status != http.StatusOK {
+		t.Errorf("handler returned wrong status code: got %v want %v", status, http.StatusOK)
+	}
+
+}
